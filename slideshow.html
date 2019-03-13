@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+<img name="slide" width="400" height="200">
+
+    <h1>Peaceful places :)</h1>
+    
+
+</body>
+
+<script>
+    var i = 0;
+    var images = [];
+    var time = 3000;
+
+    //Image List
+    images[0] = 'image1.jpg';
+    images[1] = 'image2.jpg';
+    images[2] = 'image3.jpg';
+
+    //change image
+    function changeImg(){
+        document.slide.src = images[i];
+
+        if(i < images.length -1){
+            i++;
+        } else{
+            i = 0;
+        }
+        setTimeout("changeImg()", time);
+    }
+
+    window.onload = changeImg;
+</script>
+
+</html>
